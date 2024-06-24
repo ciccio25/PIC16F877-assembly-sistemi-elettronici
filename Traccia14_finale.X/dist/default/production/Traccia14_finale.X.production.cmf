@@ -1,0 +1,403 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/main.o
+isrVec CODE 0 6AD 6AD 1A 2 1
+resetVec CODE 0 0 0 3 2 1
+MainCode CODE 0 6C7 6C7 139 2 1
+udata_shr COMMON 1 70 70 C 1 1
+config CONFIG 4 2007 2007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-6AC 2
+CONST 800-1FFF 2
+ENTRY 3-6AC 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+CODE 3-6AC 2
+CODE 800-1FFF 2
+SFR0 6-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7C-7F 1
+EEDATA 2100-21FF 2
+STRCODE 3-6AC 2
+STRCODE 800-1FFF 2
+STRING 3-6AC 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/main.o
+6AD isrVec CODE >665:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6AE isrVec CODE >666:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6AF isrVec CODE >667:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B0 isrVec CODE >668:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B2 isrVec CODE >669:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B3 isrVec CODE >673:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B5 isrVec CODE >674:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B6 isrVec CODE >675:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B7 isrVec CODE >676:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6B9 isrVec CODE >677:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6BA isrVec CODE >678:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6BB isrVec CODE >681:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6BD isrVec CODE >682:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6BE isrVec CODE >686:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C0 isrVec CODE >687:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C1 isrVec CODE >689:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C2 isrVec CODE >695:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C3 isrVec CODE >696:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C4 isrVec CODE >697:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C5 isrVec CODE >698:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C6 isrVec CODE >700:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C7 MainCode CODE >113:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6C9 MainCode CODE >114:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6CA MainCode CODE >136:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6CC MainCode CODE >137:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6CD MainCode CODE >138:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6CE MainCode CODE >140:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D0 MainCode CODE >141:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D1 MainCode CODE >157:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D3 MainCode CODE >158:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D4 MainCode CODE >159:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D5 MainCode CODE >163:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D7 MainCode CODE >164:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6D8 MainCode CODE >170:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6DA MainCode CODE >171:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6DB MainCode CODE >172:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6DD MainCode CODE >173:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6DE MainCode CODE >211:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E0 MainCode CODE >213:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E1 MainCode CODE >214:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E2 MainCode CODE >217:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E4 MainCode CODE >218:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E5 MainCode CODE >219:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E6 MainCode CODE >221:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E8 MainCode CODE >222:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6E9 MainCode CODE >230:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6EB MainCode CODE >231:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6EC MainCode CODE >232:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6ED MainCode CODE >234:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6EF MainCode CODE >235:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F0 MainCode CODE >240:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F2 MainCode CODE >241:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F3 MainCode CODE >242:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F4 MainCode CODE >248:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F6 MainCode CODE >249:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F7 MainCode CODE >256:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6F9 MainCode CODE >257:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6FA MainCode CODE >258:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6FB MainCode CODE >259:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6FD MainCode CODE >266:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6FE MainCode CODE >267:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+6FF MainCode CODE >269:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+700 MainCode CODE >274:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+702 MainCode CODE >275:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+703 MainCode CODE >276:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+704 MainCode CODE >280:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+705 MainCode CODE >287:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+707 MainCode CODE >288:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+708 MainCode CODE >289:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+709 MainCode CODE >292:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+70B MainCode CODE >293:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+70C MainCode CODE >295:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+70E MainCode CODE >296:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+70F MainCode CODE >298:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+711 MainCode CODE >299:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+712 MainCode CODE >303:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+714 MainCode CODE >304:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+715 MainCode CODE >305:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+716 MainCode CODE >306:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+717 MainCode CODE >307:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+718 MainCode CODE >308:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+71A MainCode CODE >309:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+71B MainCode CODE >311:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+71D MainCode CODE >312:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+71E MainCode CODE >316:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+71F MainCode CODE >324:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+721 MainCode CODE >325:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+722 MainCode CODE >327:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+724 MainCode CODE >328:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+725 MainCode CODE >329:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+727 MainCode CODE >330:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+728 MainCode CODE >332:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+72A MainCode CODE >333:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+72B MainCode CODE >335:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+72D MainCode CODE >336:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+72E MainCode CODE >338:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+730 MainCode CODE >339:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+731 MainCode CODE >341:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+733 MainCode CODE >342:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+734 MainCode CODE >344:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+736 MainCode CODE >345:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+737 MainCode CODE >349:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+739 MainCode CODE >350:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+73A MainCode CODE >351:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+73B MainCode CODE >357:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+73D MainCode CODE >358:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+73E MainCode CODE >359:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+73F MainCode CODE >361:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+740 MainCode CODE >362:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+741 MainCode CODE >365:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+743 MainCode CODE >366:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+744 MainCode CODE >367:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+745 MainCode CODE >368:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+746 MainCode CODE >376:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+748 MainCode CODE >377:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+749 MainCode CODE >380:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+74B MainCode CODE >383:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+74D MainCode CODE >384:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+74E MainCode CODE >385:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+750 MainCode CODE >386:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+751 MainCode CODE >388:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+753 MainCode CODE >389:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+754 MainCode CODE >394:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+756 MainCode CODE >395:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+757 MainCode CODE >397:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+759 MainCode CODE >398:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+75A MainCode CODE >399:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+75C MainCode CODE >400:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+75D MainCode CODE >402:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+75F MainCode CODE >403:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+760 MainCode CODE >404:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+761 MainCode CODE >410:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+763 MainCode CODE >411:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+764 MainCode CODE >412:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+765 MainCode CODE >414:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+766 MainCode CODE >415:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+767 MainCode CODE >418:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+769 MainCode CODE >419:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+76A MainCode CODE >420:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+76C MainCode CODE >421:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+76D MainCode CODE >423:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+76E MainCode CODE >425:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+76F MainCode CODE >430:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+771 MainCode CODE >431:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+772 MainCode CODE >432:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+774 MainCode CODE >433:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+775 MainCode CODE >435:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+777 MainCode CODE >436:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+778 MainCode CODE >437:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+779 MainCode CODE >439:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+77B MainCode CODE >441:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+77C MainCode CODE >442:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+77D MainCode CODE >444:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+77E MainCode CODE >447:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+780 MainCode CODE >448:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+781 MainCode CODE >449:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+783 MainCode CODE >450:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+784 MainCode CODE >457:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+786 MainCode CODE >458:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+787 MainCode CODE >460:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+789 MainCode CODE >461:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+78A MainCode CODE >463:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+78C MainCode CODE >464:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+78D MainCode CODE >471:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+78F MainCode CODE >472:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+790 MainCode CODE >473:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+791 MainCode CODE >475:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+793 MainCode CODE >476:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+794 MainCode CODE >477:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+795 MainCode CODE >479:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+797 MainCode CODE >480:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+798 MainCode CODE >481:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+799 MainCode CODE >485:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+79B MainCode CODE >486:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+79C MainCode CODE >488:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+79D MainCode CODE >489:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+79E MainCode CODE >494:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+79F MainCode CODE >500:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A1 MainCode CODE >501:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A2 MainCode CODE >502:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A3 MainCode CODE >510:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A5 MainCode CODE >511:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A6 MainCode CODE >512:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A7 MainCode CODE >515:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7A8 MainCode CODE >518:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7AA MainCode CODE >519:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7AB MainCode CODE >520:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7AD MainCode CODE >521:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7AE MainCode CODE >523:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B0 MainCode CODE >524:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B1 MainCode CODE >525:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B2 MainCode CODE >528:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B3 MainCode CODE >531:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B5 MainCode CODE >532:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B6 MainCode CODE >533:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B7 MainCode CODE >535:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7B9 MainCode CODE >536:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7BA MainCode CODE >537:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7BB MainCode CODE >550:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7BC MainCode CODE >552:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7BE MainCode CODE >553:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7BF MainCode CODE >554:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C1 MainCode CODE >555:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C2 MainCode CODE >557:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C4 MainCode CODE >558:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C5 MainCode CODE >559:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C6 MainCode CODE >562:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C7 MainCode CODE >564:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7C9 MainCode CODE >565:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7CA MainCode CODE >566:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7CC MainCode CODE >567:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7CD MainCode CODE >569:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7CF MainCode CODE >570:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D0 MainCode CODE >571:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D1 MainCode CODE >574:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D2 MainCode CODE >576:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D3 MainCode CODE >577:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D4 MainCode CODE >579:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D6 MainCode CODE >580:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D7 MainCode CODE >581:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7D8 MainCode CODE >591:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7DA MainCode CODE >592:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7DB MainCode CODE >593:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7DC MainCode CODE >600:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7DE MainCode CODE >601:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7DF MainCode CODE >602:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E0 MainCode CODE >604:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E2 MainCode CODE >608:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E3 MainCode CODE >609:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E4 MainCode CODE >613:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E5 MainCode CODE >618:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E7 MainCode CODE >619:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7E8 MainCode CODE >621:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7EA MainCode CODE >622:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7EB MainCode CODE >623:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7EC MainCode CODE >624:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7ED MainCode CODE >626:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7EF MainCode CODE >627:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F0 MainCode CODE >632:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F2 MainCode CODE >633:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F3 MainCode CODE >638:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F4 MainCode CODE >639:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F6 MainCode CODE >640:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F7 MainCode CODE >643:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F8 MainCode CODE >644:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7F9 MainCode CODE >645:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7FB MainCode CODE >646:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7FC MainCode CODE >648:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7FE MainCode CODE >649:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+7FF MainCode CODE >652:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+0 resetVec CODE >106:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+2 resetVec CODE >107:C:\Users\Public\Programmazione\Traccia14_finale.X\main.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 6 0 ABS 0 udata_bank0 -
+__Hudata_bank1 6 0 ABS 0 udata_bank1 -
+__Hudata_bank2 6 0 ABS 0 udata_bank2 -
+__Hudata_bank3 6 0 ABS 0 udata_bank3 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__LresetVec 0 0 CODE 0 resetVec -
+__HresetVec 6 0 CODE 0 resetVec -
+__Hedata 6 0 ABS 0 edata -
+__Hudata 6 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+__Ledata 6 0 ABS 0 edata -
+__Ludata 6 0 ABS 0 udata -
+__Hcode 6 0 ABS 0 code -
+__Hdata 6 0 ABS 0 data -
+__Lcode 6 0 ABS 0 code -
+__Ldata 6 0 ABS 0 data -
+__HisrVec 6 0 ABS 0 isrVec -
+__S0 800 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__LisrVec 6 0 ABS 0 isrVec -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__LMainCode 6 0 ABS 0 MainCode -
+__Ludata_bank0 6 0 ABS 0 udata_bank0 -
+__Ludata_bank1 6 0 ABS 0 udata_bank1 -
+__Ludata_bank2 6 0 ABS 0 udata_bank2 -
+__Ludata_bank3 6 0 ABS 0 udata_bank3 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__HMainCode 6 0 ABS 0 MainCode -
+__Hudata_shr 6 0 ABS 0 udata_shr -
+__Ludata_shr 6 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+isrVec 0 6AD D5A 1A 2
+resetVec 0 0 0 3 2
+MainCode 0 6C7 D8E 139 2
+udata_shr 1 70 70 C 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
